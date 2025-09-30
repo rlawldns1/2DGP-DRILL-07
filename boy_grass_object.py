@@ -70,37 +70,31 @@ def handle_events():
 
 def reset_world():
     global running
-    global grass
-    global boy
-    global Sballs
-    global Bballs
-    global SSballs
-    global BBballs
+    global world
     running = True
+    world = []
 
     grass = Grass()
+    world.append(grass)
+
     boy = Boy()
+    world.append(boy)
+
     SSballs = [SBalls() for _ in range(10)]
+    world += SSballs
+
     BBballs = [BBalls() for _ in range(10)]
-    pass
+    world += BBballs
+
 
 def update_world():
-    grass.update()
-    boy.update()
-    for Sballs in SSballs:
-        Sballs.update()
-    for Bballs in BBballs:
-        Bballs.update()
-    pass
+    for o in world:
+        o.update()
 
 def render_world():
     clear_canvas()
-    grass.draw()
-    boy.draw()
-    for Sballs in SSballs:
-        Sballs.draw()
-    for Bballs in BBballs:
-        Bballs.draw()
+    for o in world:
+        o.draw()
     update_canvas()
     pass
 
