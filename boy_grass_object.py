@@ -16,6 +16,9 @@ class Boy:
         self.x = 400
         self.y = 90
         self.frame = 0
+
+    def draw(self):
+        self.image.clip_draw(self.frame * 100, 0, 100, 100, self.x, self.y)
     pass
 
 class Balls:
@@ -38,6 +41,7 @@ def handle_events():
 def reset_world():
     global running
     global grass
+    global boy
     running = True
 
     grass = Grass()
@@ -52,6 +56,7 @@ def update_world():
 def render_world():
     clear_canvas()
     grass.draw()
+    boy.draw()
     update_canvas()
     pass
 
