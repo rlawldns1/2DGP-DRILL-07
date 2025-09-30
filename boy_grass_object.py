@@ -44,7 +44,7 @@ class SBalls:
 class BBalls:
     def __init__(self):
         self.image = load_image('ball41x41.png')
-        self.x = 200
+        self.x = random.randint(200, 400)
         self.y = 599
 
     def draw(self):
@@ -75,12 +75,13 @@ def reset_world():
     global Sballs
     global Bballs
     global SSballs
+    global BBballs
     running = True
 
     grass = Grass()
     boy = Boy()
     SSballs = [SBalls() for _ in range(10)]
-    Bballs = BBalls()
+    BBballs = [BBalls() for _ in range(10)]
     pass
 
 def update_world():
@@ -88,7 +89,8 @@ def update_world():
     boy.update()
     for Sballs in SSballs:
         Sballs.update()
-    Bballs.update()
+    for Bballs in BBballs:
+        Bballs.update()
     pass
 
 def render_world():
@@ -97,7 +99,8 @@ def render_world():
     boy.draw()
     for Sballs in SSballs:
         Sballs.draw()
-    Bballs.draw()
+    for Bballs in BBballs:
+        Bballs.draw()
     update_canvas()
     pass
 
