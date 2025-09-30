@@ -9,6 +9,10 @@ class Grass:
 class Boy:
     pass
 
+class Balls:
+    pass
+
+
 def handle_events():
     global running
     events = get_events()
@@ -28,6 +32,7 @@ def reset_world():
 
     grass = Grass()
     boy = Boy()
+    balls = Balls()
     pass
 
 def update_world():
