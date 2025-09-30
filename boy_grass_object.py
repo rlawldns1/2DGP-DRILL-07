@@ -10,6 +10,9 @@ class Grass:
     def draw(self):
         self.image.draw(400,30)
 
+    def update(self):
+        pass
+
 class Boy:
     def __init__(self):
         self.image = load_image('run_animation.png')
@@ -54,6 +57,7 @@ def reset_world():
     pass
 
 def update_world():
+    grass.update()
     boy.update()
     pass
 
