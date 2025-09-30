@@ -28,7 +28,14 @@ class Boy:
         self.x += 5
     pass
 
-class Balls:
+class SBalls:
+    def __init__(self):
+        self.image = load_image('ball21x21.png')
+    pass
+
+class BBalls:
+    def __init__(self):
+        self.image = load_image('ball41x41.png')
     pass
 
 
@@ -49,11 +56,13 @@ def reset_world():
     global running
     global grass
     global boy
+    global sballs
     running = True
 
     grass = Grass()
     boy = Boy()
-    balls = Balls()
+    Sballs = SBalls()
+    Bballs = BBalls()
     pass
 
 def update_world():
