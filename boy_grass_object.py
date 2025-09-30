@@ -6,6 +6,9 @@ import random
 class Grass:
     pass
 
+class Boy:
+    pass
+
 def handle_events():
     global running
     events = get_events()
@@ -24,7 +27,7 @@ def reset_world():
     running = True
 
     grass = Grass()
-
+    boy = Boy()
     pass
 
 def update_world():
