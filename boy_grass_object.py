@@ -3,7 +3,8 @@ import random
 
 
 # Game object class here
-
+class Grass:
+    pass
 
 def handle_events():
     global running
@@ -14,9 +15,16 @@ def handle_events():
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             running = False
 
+
+
+
+
 def reset_world():
     global running
     running = True
+
+    grass = Grass()
+
     pass
 
 def update_world():
@@ -29,13 +37,7 @@ def render_world():
 open_canvas()
 
 
-
-
-
 reset_world()
-
-
-
 
 
 while running:
