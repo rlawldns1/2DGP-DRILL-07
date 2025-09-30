@@ -36,6 +36,10 @@ class SBalls:
     def draw(self):
         self.image.draw(self.x, self.y)
 
+    def update(self):
+        if self.y > 40:
+            self.y -= 5
+
 
 class BBalls:
     def __init__(self):
@@ -45,6 +49,10 @@ class BBalls:
 
     def draw(self):
         self.image.draw(self.x, self.y)
+
+    def update(self):
+        if self.y > 40:
+            self.y -= 5
 
 
 def handle_events():
@@ -77,6 +85,8 @@ def reset_world():
 def update_world():
     grass.update()
     boy.update()
+    Sballs.update()
+    Bballs.update()
     pass
 
 def render_world():
