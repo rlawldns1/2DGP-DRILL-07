@@ -11,6 +11,11 @@ class Grass:
         self.image.draw(400,30)
 
 class Boy:
+    def __init__(self):
+        self.image = load_image('run_animation.png')
+        self.x = 400
+        self.y = 90
+        self.frame = 0
     pass
 
 class Balls:
