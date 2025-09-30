@@ -26,7 +26,6 @@ class Boy:
     def update(self):
         self.frame = (self.frame + 1) % 8
         self.x += 5
-    pass
 
 class SBalls:
     def __init__(self):
@@ -34,15 +33,18 @@ class SBalls:
         self.x = 400
         self.y = 599
 
+    def draw(self):
+        self.image.draw(self.x, self.y)
 
-    pass
 
 class BBalls:
     def __init__(self):
         self.image = load_image('ball41x41.png')
         self.x = 200
         self.y = 599
-    pass
+
+    def draw(self):
+        self.image.draw(self.x, self.y)
 
 
 def handle_events():
@@ -81,6 +83,8 @@ def render_world():
     clear_canvas()
     grass.draw()
     boy.draw()
+    Sballs.draw()
+    Bballs.draw()
     update_canvas()
     pass
 
