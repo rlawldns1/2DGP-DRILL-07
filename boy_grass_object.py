@@ -14,11 +14,11 @@ def handle_events():
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             running = False
 
-
-
+running = True
 
 open_canvas()
 
-
+while running:
+    pass
 
 close_canvas()
