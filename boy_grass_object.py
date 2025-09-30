@@ -15,6 +15,8 @@ def handle_events():
             running = False
 
 def reset_world():
+    global running
+    running = True
     pass
 
 def update_world():
@@ -23,7 +25,6 @@ def update_world():
 def render_world():
     pass
 
-running = True
 
 open_canvas()
 
