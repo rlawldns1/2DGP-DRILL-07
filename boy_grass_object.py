@@ -30,7 +30,7 @@ class Boy:
 class SBalls:
     def __init__(self):
         self.image = load_image('ball21x21.png')
-        self.x = random.randint(400, 600)
+        self.x = random.randint(100, 700)
         self.y = 599
 
     def draw(self):
@@ -44,7 +44,7 @@ class SBalls:
 class BBalls:
     def __init__(self):
         self.image = load_image('ball41x41.png')
-        self.x = random.randint(200, 400)
+        self.x = random.randint(100, 700)
         self.y = 599
 
     def draw(self):
