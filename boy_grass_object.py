@@ -38,7 +38,7 @@ class SBalls:
 
     def update(self):
         if self.y > 40:
-            self.y -= 5
+            self.y -= random.randint(1, 10)
 
 
 class BBalls:
