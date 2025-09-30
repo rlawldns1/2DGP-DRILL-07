@@ -56,7 +56,8 @@ def reset_world():
     global running
     global grass
     global boy
-    global sballs
+    global Sballs
+    global Bballs
     running = True
 
     grass = Grass()
