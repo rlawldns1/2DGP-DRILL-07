@@ -31,11 +31,17 @@ class Boy:
 class SBalls:
     def __init__(self):
         self.image = load_image('ball21x21.png')
+        self.x = 400
+        self.y = 599
+
+
     pass
 
 class BBalls:
     def __init__(self):
         self.image = load_image('ball41x41.png')
+        self.x = 200
+        self.y = 599
     pass
 
 
