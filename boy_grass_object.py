@@ -18,7 +18,7 @@ class Boy:
         self.image = load_image('run_animation.png')
         self.x = random.randint(0,600)
         self.y = 90
-        self.frame = 0
+        self.frame = random.randint(0,7)
 
     def draw(self):
         self.image.clip_draw(self.frame * 100, 0, 100, 100, self.x, self.y)
