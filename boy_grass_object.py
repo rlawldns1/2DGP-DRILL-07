@@ -19,6 +19,7 @@ running = True
 open_canvas()
 
 while running:
+    handle_events()
     pass
 
 close_canvas()
