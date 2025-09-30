@@ -66,8 +66,6 @@ def handle_events():
 
 
 
-
-
 def reset_world():
     global running
     global world
@@ -77,8 +75,8 @@ def reset_world():
     grass = Grass()
     world.append(grass)
 
-    boy = Boy()
-    world.append(boy)
+    team = [Boy() for _ in range(10)]
+    world += team
 
     SSballs = [SBalls() for _ in range(10)]
     world += SSballs
@@ -96,7 +94,6 @@ def render_world():
     for o in world:
         o.draw()
     update_canvas()
-    pass
 
 
 open_canvas()
