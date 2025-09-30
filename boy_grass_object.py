@@ -19,6 +19,10 @@ class Boy:
 
     def draw(self):
         self.image.clip_draw(self.frame * 100, 0, 100, 100, self.x, self.y)
+
+    def update(self):
+        self.frame = (self.frame + 1) % 8
+        self.x += 5
     pass
 
 class Balls:
@@ -50,7 +54,7 @@ def reset_world():
     pass
 
 def update_world():
-
+    boy.update()
     pass
 
 def render_world():
