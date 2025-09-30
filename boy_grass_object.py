@@ -17,6 +17,8 @@ def handle_events():
 def reset_world():
     pass
 
+def update_world():
+    pass
 
 running = True
 
@@ -28,8 +30,13 @@ open_canvas()
 
 reset_world()
 
+
+
+
+
 while running:
     handle_events()
+    update_world()
     pass
 
 close_canvas()
