@@ -65,7 +65,6 @@ def handle_events():
             running = False
 
 
-
 def reset_world():
     global running
     global world
