@@ -7,6 +7,9 @@ class Grass:
     def __init__(self):
         self.image = load_image('grass.png')
 
+    def draw(self):
+        self.image.draw(400,30)
+
 class Boy:
     pass
 
@@ -29,6 +32,7 @@ def handle_events():
 
 def reset_world():
     global running
+    global grass
     running = True
 
     grass = Grass()
@@ -37,9 +41,13 @@ def reset_world():
     pass
 
 def update_world():
+
     pass
 
 def render_world():
+    clear_canvas()
+    grass.draw()
+    update_canvas()
     pass
 
 
@@ -53,6 +61,6 @@ while running:
     handle_events()
     update_world()
     render_world()
-    pass
+    delay(0.05)
 
 close_canvas()
